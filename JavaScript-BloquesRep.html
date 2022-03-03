@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+      <title>JavaScript - Bloques de repetición</title>  
+    </head>
+	<body>
+        <h1>Bloques de repetición</h1>
+        <br>
+  		<script language="javascript" type="text/javascript">
+            let cResultado = '';
+            let cResFor    = "";
+            let cResWhile  = "";
+            let cResDo     = "";
+          
+            for (nCont = 0; nCont < 5; nCont++) {
+            	cResFor = cResFor + nCont;
+            }  
+            cResultado += "Resultado estructura For: " + cResFor + " <br>";
+
+            nCont = 0;
+			while ( nCont < 5 ) {
+                cResWhile = cResWhile + nCont;
+				nCont++;
+			}          
+            cResultado += "Resultado estructura While: " + cResWhile + "<br>";
+
+            nCont = 0;
+			do  {
+                cResDo = cResDo + nCont;
+				nCont++;
+			} while ( nCont < 5 );
+            cResultado += "Resultado estructura Do-While: " + cResDo + "<br>";
+          
+            document.write( cResultado )
+  		</script>
+	</body>
+</html>
