@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>JavaScript - Prueba JSON</title>
+      	<script>
+          	var JSONObj = { "nombrelibro":"El hacedor", "precio":500 };
+          
+          	function MuestraLibro(){
+            	var cTexto;
+           
+            	cTexto  = "Libro: " + JSONObj.nombrelibro + "<br>";
+            	cTexto += " Precio: " + JSONObj.precio;
+            document.write(cTexto);
+          }
+      	</script>
+	</head>
+	<body>
+      <button type="button" onclick="javascript:MuestraLibro()">Muestra Libro </button>
+	</body>
+</html>
