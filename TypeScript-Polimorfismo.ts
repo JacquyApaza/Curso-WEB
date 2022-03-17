@@ -73,3 +73,29 @@ resta.ValorA = 20;
 resta.ValorB = 5;
 resta.Operar();
 console.log( "Resultado de la resta: " + resta.Resultado);
+
+/* ********************************************************************************* 
+* Polimorfismo por Interfaz 
+********************************************************************************** */
+
+interface IOperacion{
+    Operar( valA:number, valB:number ):number;
+}
+
+class SumaIO implements IOperacion{
+    Operar( valA:number, valB:number):number{
+        return valA+valB;
+    }
+} 
+
+class RestaIO implements IOperacion{
+    Operar( valA:number, valB:number):number{
+        return valA-valB;
+    }
+} 
+
+let sumaIO = new SumaIO();
+console.log( "Suma por interface es: " + sumaIO.Operar( 10, 30) );
+
+let restaIO = new RestaIO();
+console.log( "Resta por interface es: " + sumaIO.Operar( 50, 15) );
